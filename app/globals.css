@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body {
+  background: #FAFAF5;
+  color: #0A0A0A;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #A3E635; color: #0A0A0A; }
+
+.dot-grid {
+  background-image: radial-gradient(rgba(10,10,10,0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.marquee { animation: marquee 30s linear infinite; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.fade-up { animation: fadeUp 0.7s ease-out both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
