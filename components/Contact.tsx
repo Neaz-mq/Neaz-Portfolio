@@ -1,41 +1,87 @@
 export default function Contact() {
-  const links = [
+  const socials = [
     { label: "GitHub", href: "https://github.com/Neaz-mq" },
     { label: "LinkedIn", href: "https://linkedin.com/in/neaz-morshed" },
     { label: "Fiverr", href: "https://fiverr.com/neaztech" },
     { label: "Upwork", href: "https://upwork.com/neazmorshed" },
   ];
+
   return (
     <section id="contact" className="relative overflow-hidden bg-ink text-ivory">
+      {/* Dot grid */}
       <div className="dot-grid absolute inset-0 opacity-10" aria-hidden />
-      <div className="relative mx-auto max-w-6xl px-6 py-24 text-center">
-        <span className="text-xs font-medium uppercase tracking-widest text-limeglow">Let&apos;s talk</span>
-        <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight">
-          Have a project in mind?
-        </h2>
-        <p className="mt-5 mx-auto max-w-xl text-ivory/70">
-          I&apos;m currently available for freelance work and full-time roles. Reach out — I reply within 24 hours.
-        </p>
-        <a
-          href="mailto:neazmorshed666@gmail.com"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-limeglow px-7 py-4 text-base font-semibold text-ink hover:bg-ivory transition-colors"
-        >
-          neazmorshed666@gmail.com →
-        </a>
-        <ul className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                className="text-ivory/70 hover:text-limeglow transition-colors"
-                href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {l.label} ↗
-              </a>
-            </li>
-          ))}
-        </ul>
+
+      {/* Top ambient glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-limeglow/8 blur-[100px] rounded-full pointer-events-none" />
+
+      <div className="relative mx-auto max-w-6xl px-6 pt-20 pb-16">
+
+        {/* Label row */}
+        <div className="flex items-center gap-3 mb-12">
+          <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-limeglow">Let&apos;s talk</span>
+          <div className="w-8 h-px bg-ivory/15" />
+          <span className="text-[11px] text-ivory/30 tabular-nums">04</span>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          {/* Left */}
+          <div>
+            <h2 className="text-[40px] md:text-[52px] font-bold tracking-tight leading-[1.05] mb-5">
+              Have a project<br />
+              <span className="text-limeglow">in mind?</span>
+            </h2>
+            <p className="text-ivory/50 text-[14px] leading-relaxed max-w-xs mb-8">
+              I&apos;m available for freelance projects and full-time roles.
+              Drop me a line — I reply within 24 hours.
+            </p>
+
+            {/* Availability badge */}
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-ivory/10 bg-ivory/5 px-4 py-2.5">
+              <span className="flex gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-lime animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-lime" />
+              </span>
+              <span className="text-[11px] font-medium text-ivory/60">Available for new work</span>
+            </div>
+          </div>
+
+          {/* Right — cards */}
+          <div className="flex flex-col gap-3">
+            {/* Email */}
+            <a
+              href="mailto:neazmorshed666@gmail.com"
+              className="group flex items-center justify-between gap-4 rounded-2xl border border-ivory/10 bg-ivory/5 hover:bg-ivory/8 hover:border-limeglow/30 px-5 py-4 transition-all duration-200"
+            >
+              <div>
+                <p className="text-[10px] uppercase tracking-widest text-ivory/30 mb-0.5">Email</p>
+                <p className="text-[14px] font-semibold text-ivory group-hover:text-limeglow transition-colors">
+                  neazmorshed666@gmail.com
+                </p>
+              </div>
+              <div className="w-8 h-8 rounded-full border border-ivory/15 flex items-center justify-center text-ivory/30 group-hover:bg-limeglow group-hover:text-ink group-hover:border-transparent transition-all duration-200 flex-shrink-0 text-xs">
+                ↗
+              </div>
+            </a>
+
+            {/* Socials 2×2 */}
+            <div className="grid grid-cols-2 gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.href}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between rounded-xl border border-ivory/10 bg-ivory/5 hover:bg-ivory/8 hover:border-limeglow/25 px-4 py-3.5 transition-all duration-200"
+                >
+                  <span className="text-[13px] font-medium text-ivory/60 group-hover:text-ivory transition-colors">{s.label}</span>
+                  <span className="text-[10px] text-ivory/20 group-hover:text-limeglow transition-colors">↗</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
