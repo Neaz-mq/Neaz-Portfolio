@@ -57,11 +57,11 @@ const stack = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="skills" className="py-16 md:py-32">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
 
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-16">
+        <div className="flex items-center gap-4 mb-10 md:mb-16">
           <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-lime">
             Stack
           </span>
@@ -70,8 +70,8 @@ export default function Skills() {
         </div>
 
         {/* Title row */}
-        <div className="flex items-end justify-between gap-6 mb-14">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.05]">
+        <div className="flex items-end justify-between gap-6 mb-8 md:mb-14">
+          <h2 className="text-2xl md:text-5xl font-bold tracking-tight leading-[1.05]">
             The stack I{" "}
             <span className="relative inline-block">
               <span className="relative z-10">build with</span>
@@ -91,15 +91,15 @@ export default function Skills() {
               className="grid md:grid-cols-[200px_1fr] border-b border-ink/10"
             >
               {/* Layer label */}
-              <div className="flex md:flex-col gap-3 md:gap-2 items-center md:items-start pt-8 pb-4 md:pb-8 md:pr-8 border-b md:border-b-0 md:border-r border-ink/10">
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-ink/70">
+              <div className="flex md:flex-col gap-2 items-center md:items-start pt-4 pb-3 md:pt-8 md:pb-8 md:pr-8 border-b md:border-b-0 md:border-r border-ink/10">
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-ink/70">
                   {group.layer}
                 </span>
-                <span className="text-xs tabular-nums text-ink/35 font-medium">{group.index}</span>
+                <span className="text-[10px] tabular-nums text-ink/35 font-medium">{group.index}</span>
               </div>
 
               {/* Skills grid */}
-              <div className="py-8 md:pl-10">
+              <div className="py-3 md:py-8 md:pl-10">
                 <div className="flex flex-wrap gap-0 border border-ink/10">
                   {group.items.map((item) => (
                     <div
@@ -108,17 +108,17 @@ export default function Skills() {
                         group relative
                         w-1/2 sm:w-1/3 lg:w-1/4
                         border-r border-b border-ink/10
-                        px-5 py-5
+                        px-3 py-3 md:px-5 md:py-5
                         bg-ivory hover:bg-ink
                         transition-colors duration-200
                         cursor-default
                       "
                     >
-                      <span className="absolute top-4 right-4 h-1.5 w-1.5 rounded-full bg-lime opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <p className="text-sm font-bold text-ink group-hover:text-ivory transition-colors leading-none mb-2">
+                      <span className="absolute top-2.5 right-2.5 h-1.5 w-1.5 rounded-full bg-lime opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <p className="text-xs md:text-sm font-bold text-ink group-hover:text-ivory transition-colors leading-none mb-1 md:mb-2">
                         {item.name}
                       </p>
-                      <p className="text-[11px] uppercase tracking-[0.1em] text-ink/50 group-hover:text-ivory/45 transition-colors">
+                      <p className="text-[10px] uppercase tracking-[0.1em] text-ink/50 group-hover:text-ivory/45 transition-colors">
                         {item.note}
                       </p>
                     </div>

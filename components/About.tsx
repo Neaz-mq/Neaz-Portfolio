@@ -31,20 +31,18 @@ export default function About() {
           </p>
         </div>
 
-        {/* Facts grid with left-border cards */}
+        {/* Facts grid */}
         <div className="grid grid-cols-2 gap-px bg-ivory/10 border border-ivory/10 md:grid-cols-4">
           {facts.map((fact, i) => (
             <div
               key={i}
-              className="bg-ink px-6 py-7 flex flex-col justify-between gap-4 group hover:bg-ivory/[0.04] transition-colors"
+              className="bg-ink px-6 py-7 flex flex-col gap-1.5 group hover:bg-ivory/[0.04] transition-colors"
             >
               <span className="text-[10px] uppercase tracking-[0.18em] text-ivory/30 font-medium">
                 {fact.label}
               </span>
-              <div>
-                <p className="text-sm font-semibold text-ivory leading-snug">{fact.value}</p>
-                <p className="text-sm text-ivory/45 mt-0.5">{fact.sub}</p>
-              </div>
+              <p className="text-sm font-semibold text-ivory leading-snug">{fact.value}</p>
+              <p className="text-sm text-ivory/45">{fact.sub}</p>
             </div>
           ))}
         </div>
