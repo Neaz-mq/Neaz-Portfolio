@@ -1,10 +1,10 @@
 export default function Contact() {
-  const socials = [
-    { label: "GitHub", href: "https://github.com/Neaz-mq" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/neaz-morshed" },
-    { label: "Fiverr", href: "https://fiverr.com/neaztech" },
-    { label: "Upwork", href: "https://upwork.com/neazmorshed" },
-  ];
+const socials = [
+  { label: "GitHub", href: "https://github.com/Neaz-mq" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/neaz-morshed" },
+  { label: "Fiverr", href: "https://fiverr.com/neaztech" },
+  { label: "Upwork", href: "https://www.upwork.com/freelancers/~0122afc3d21e9fb211?mp_source=share" },
+];
 
   return (
     <section id="contact" className="relative overflow-hidden bg-ink text-ivory">
